@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+// opciones para los jugadores 
+const options = ['rock', 'paper', 'scissors'];
+
+// seleccion de la computadora
+function getComputerChoice(options){
+return options[Math.floor(Math.random() * options.length)];
+}
+
+const playerSelection = "rock";
+let computerSelection = getComputerChoice(options); 
+
+function playRound(computerSelection, playerSelection){
+    let winner = "";
+    if (playerSelection === computerSelection){
+        return "Draw";
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')){
+        return winner = 'player';
+    } else {
+        return winner = 'computer';
+    }
+}
+
+const winner = playRound(computerSelection, playerSelection);
+console.log(computerSelection)
+console.log(winner);
+/* function checkWinner(winner){
+
+}
+ */
+
+    </script>
+
+</body>
+</html>
