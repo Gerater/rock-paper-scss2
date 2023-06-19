@@ -40,10 +40,17 @@ return options[Math.floor(Math.random() * options.length)];
 const playerSelection = "rock";
 let computerSelection = getComputerChoice(options); 
 
-function playRound(computerSelection, playerSelection){
+/* funcion playRound:
+Recibe la seleccion de la computadora y la seleccion del jugador.
+Determina con condicionales quien es el que gana: 
+Si ambos jugadores eligen igual, devuelve "empate"
+Si el jugador gana, devuelve winner = 'player'
+Si no se cumplen las condiciones anteriores, devuelve winner = "computer"
+ */
+ function playRound(computerSelection, playerSelection){
     let winner = "";
     if (playerSelection === computerSelection){
-        return "Draw";
+        return 'Draw';
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')){
         return winner = 'player';
     } else {
@@ -51,13 +58,23 @@ function playRound(computerSelection, playerSelection){
     }
 }
 
+// crea variable winner para almacenar el resultado de la funcion.
 const winner = playRound(computerSelection, playerSelection);
-console.log(computerSelection)
-console.log(winner);
-/* function checkWinner(winner){
 
+function checkWinner(winner){
+if (winner === 'Draw'){
+    return "It's a draw.";
+} else if (winner === 'player'){
+    return "You won the round!";
+} else{
+    return "You lose!";
 }
- */
+    
+}
+
+const round = checkWinner(winner)
+console.log(computerSelection)
+console.log(round)
 
     </script>
 
