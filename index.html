@@ -5,78 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper Scissors</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-// opciones para los jugadores 
-const options = ['rock', 'paper', 'scissors'];
-
-// seleccion de la computadora
-function getComputerChoice(options){
-return options[Math.floor(Math.random() * options.length)];
-}
-
-const playerSelection = "rock";
-let computerSelection = getComputerChoice(options); 
-
-/* funcion playRound:
-Recibe la seleccion de la computadora y la seleccion del jugador.
-Determina con condicionales quien es el que gana: 
-Si ambos jugadores eligen igual, devuelve "empate"
-Si el jugador gana, devuelve winner = 'player'
-Si no se cumplen las condiciones anteriores, devuelve winner = "computer"
- */
- function playRound(computerSelection, playerSelection){
-    let winner = "";
-    if (playerSelection === computerSelection){
-        return 'Draw';
-    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')){
-        return winner = 'player';
-    } else {
-        return winner = 'computer';
-    }
-}
-
-// crea variable winner para almacenar el resultado de la funcion.
-const winner = playRound(computerSelection, playerSelection);
-
-function checkWinner(winner){
-if (winner === 'Draw'){
-    return "It's a draw.";
-} else if (winner === 'player'){
-    return "You won the round!";
-} else{
-    return "You lose!";
-}
-    
-}
-
-const round = checkWinner(winner)
-console.log(computerSelection)
-console.log(round)
-
-    </script>
 
 </body>
 </html>
